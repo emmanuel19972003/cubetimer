@@ -8,13 +8,22 @@
 import SwiftUI
 
 struct AlgsByType: View {
+    @EnvironmentObject var Secion: secionInfo
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        if (Secion.tipo == "2x2"){
+            _x2Algs()
+        }else if (Secion.tipo == "4x4"){
+            Algs4X4()
+        }
+        else{
+            listaAlgs()
+        }
     }
 }
 
 struct AlgsByType_Previews: PreviewProvider {
+    static let myEnvObject = secionInfo()
     static var previews: some View {
-        AlgsByType()
+        AlgsByType().environmentObject(myEnvObject)
     }
 }

@@ -8,61 +8,91 @@
 import SwiftUI
 
 struct cosasasBorrarDespues: View {
-    let promedio: Double = 60.0
-    let AO12: Double = 15.0
-    let AO5: Double = 30.5
-    let Best: Double = 10.0
-    var espacio:Double = 0.0
-    init() {
+    var promedio: Double
+    var AO12: Double
+    var AO5: Double
+    var Best: Double
+    var espacio:Double
+    init(lasecion: secionInfo) {
+        
+        if (lasecion.Best == 0){
+            self.Best = 1
+        }else{
+            self.Best = lasecion.Best
+        }
+        if (lasecion.AO5 == 0){
+            self.AO5 = 1
+            self.AO12 = 1
+        }else{
+            self.AO5 = lasecion.AO5
+            self.AO12 = lasecion.AO12
+        }
+        if (lasecion.AO12 == 0){
+            self.AO12 = self.AO5
+        }else{
+            self.AO12 = lasecion.AO12
+        }
+        if (lasecion.promedio == 0){
+            self.promedio = Best
+        }else{
+            self.promedio = lasecion.promedio
+        }
+        self.promedio = max(AO12, AO5, promedio)*1.1
         self.espacio = promedio/4
+        
         }
     var body: some View {
         //("\(String(format: "%.3f", viewmodel.contador))")
-        ZStack{
-            HStack(alignment: .bottom, spacing: 15) {
-                Capsule().frame(width: 45, height: 192).foregroundColor(.clear)
-                //
-                Capsule().frame(width: 1, height: 192).foregroundColor(.clear)
-                chartBarr(valor: ((Best)/promedio)*100, nombre: "B", colorBack: .blue, colorFrente: .red)
-                chartBarr(valor: ((AO5)/promedio)*100, nombre: "Ao5", colorBack: .blue, colorFrente: .red)
-                chartBarr(valor: ((AO12)/promedio)*100, nombre: "Ao12", colorBack: .blue, colorFrente: .red)
-                chartBarr(valor: 100, nombre: "", colorBack: .clear, colorFrente: .red)
-            }//.frame(width: 170, height: 220)
-            .background(
-                VStack(alignment: .trailing){
-                    HStack(spacing: 0){
-                        Text("\(String(format: "%.1f", espacio*4))").frame(width: 60)
-                        Rectangle().frame(height: 2)
-                    }
-                    Spacer()
-                    HStack(spacing: 0){
-                        Text("\(String(format: "%.1f", espacio*3))").frame(width: 60)
-                        Rectangle().frame(height: 2)
-                    }
-                    Spacer()
-                    HStack(spacing: 0){
-                        Text("\(String(format: "%.1f", espacio*2))").frame(width: 60)
-                        Rectangle().frame(height: 2)
-                    }
-                    Spacer()
-                    HStack(spacing: 0){
-                        Text("\(String(format: "%.1f", espacio))").frame(width: 60)
-                        Rectangle().frame(height: 2)
+        
+        Group {
+            GeometryReader { geometry in
+                ZStack{
+                    HStack(alignment: .bottom, spacing: 15) {
+                        Capsule().frame(width: 45, height: 192).foregroundColor(.clear)
+                        //
+                        Capsule().frame(width: 1, height: 192).foregroundColor(.clear)
+                        chartBarr(valor: ((Best)/promedio)*100, nombre: "B", colorBack: .blue, colorFrente: .red)
+                        chartBarr(valor: ((AO5)/promedio)*100, nombre: "Ao5", colorBack: .blue, colorFrente: .red)
+                        chartBarr(valor: ((AO12)/promedio)*100, nombre: "Ao12", colorBack: .blue, colorFrente: .red)
+                       
+                    }//.frame(width: 170, height: 220)
+                    .background(
+                        VStack(alignment: .trailing){
+                            HStack(spacing: 0){
+                                Text("\(String(format: "%.1f", espacio*4))").frame(width: 60)
+                                Rectangle().frame(height: 2).foregroundColor(.gray)
+                            }
+                            Spacer()
+                            HStack(spacing: 0){
+                                Text("\(String(format: "%.1f", espacio*3))").frame(width: 60)
+                                Rectangle().frame(height: 2).foregroundColor(.gray)
+                            }
+                            Spacer()
+                            HStack(spacing: 0){
+                                Text("\(String(format: "%.1f", espacio*2))").frame(width: 60)
+                                Rectangle().frame(height: 2).foregroundColor(.gray)
+                            }
+                            Spacer()
+                            HStack(spacing: 0){
+                                Text("\(String(format: "%.1f", espacio))").frame(width: 60)
+                                Rectangle().frame(height: 2).foregroundColor(.gray)
+                                
+                            }
+                            Spacer()
+                            HStack(spacing: 0){
+                                Text("0").frame(width: 60)
+                                Rectangle().frame(height: 2)
+                                
+                            }
+                            Spacer()
+                        }
                         
-                    }
-                    Spacer()
-                    HStack(spacing: 0){
-                        Text("0").frame(width: 60)
-                        Rectangle().frame(height: 2)
                         
-                    }
-                    Spacer()
+                        
+                    )
                 }
-                
-                
-                
-            )
-        }
+            }
+        }//.frame(width: 500, height: 500)
         
         
         
@@ -71,7 +101,7 @@ struct cosasasBorrarDespues: View {
 
 struct cosasasBorrarDespues_Previews: PreviewProvider {
     static var previews: some View {
-        cosasasBorrarDespues()
+        cosasasBorrarDespues(lasecion: secionInfo())
     }
 }
 

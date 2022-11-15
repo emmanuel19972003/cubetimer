@@ -2,5 +2,36 @@
 <Timeline
    version = "3.0">
    <TimelineItems>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/emmanuelzambranoquitian/Desktop/Clases%20Xcode/MVVM1/intentoPermutacion.playground#CharacterRangeLen=587&amp;CharacterRangeLoc=0&amp;EndingColumnNumber=0&amp;EndingLineNumber=23&amp;StartingColumnNumber=0&amp;StartingLineNumber=0&amp;Timestamp=670699064.515699"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/emmanuelzambranoquitian/Desktop/Clases%20Xcode/MVVM1/intentoPermutacion.playground#CharacterRangeLen=587&amp;CharacterRangeLoc=0&amp;EndingColumnNumber=0&amp;EndingLineNumber=23&amp;StartingColumnNumber=0&amp;StartingLineNumber=0&amp;Timestamp=670699064.515774"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/emmanuelzambranoquitian/Desktop/Clases%20Xcode/MVVM1/intentoPermutacion.playground#CharacterRangeLen=587&amp;CharacterRangeLoc=0&amp;EndingColumnNumber=0&amp;EndingLineNumber=23&amp;StartingColumnNumber=0&amp;StartingLineNumber=0&amp;Timestamp=670699064.515812"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/emmanuelzambranoquitian/Desktop/Clases%20Xcode/MVVM1/intentoPermutacion.playground#CharacterRangeLen=587&amp;CharacterRangeLoc=0&amp;EndingColumnNumber=0&amp;EndingLineNumber=23&amp;StartingColumnNumber=0&amp;StartingLineNumber=0&amp;Timestamp=670699064.515848"
+         lockedSize = "{614, 128}"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/emmanuelzambranoquitian/Desktop/Clases%20Xcode/MVVM1/intentoPermutacion.playground#CharacterRangeLen=541&amp;CharacterRangeLoc=46&amp;EndingColumnNumber=0&amp;EndingLineNumber=23&amp;StartingColumnNumber=0&amp;StartingLineNumber=3&amp;Timestamp=670699064.51589"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
+      <LoggerValueHistoryTimelineItem
+         documentLocation = "file:///Users/emmanuelzambranoquitian/Desktop/Clases%20Xcode/MVVM1/intentoPermutacion.playground#CharacterRangeLen=74&amp;CharacterRangeLoc=512&amp;EndingColumnNumber=0&amp;EndingLineNumber=22&amp;StartingColumnNumber=0&amp;StartingLineNumber=19&amp;Timestamp=670699064.515925"
+         selectedRepresentationIndex = "0"
+         shouldTrackSuperviewWidth = "NO">
+      </LoggerValueHistoryTimelineItem>
    </TimelineItems>
 </Timeline>

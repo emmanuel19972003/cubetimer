@@ -18,3 +18,4 @@ struct cotenidoprincipal_Previews: PreviewProvider {
         cotenidoprincipal()
     }
 }
+

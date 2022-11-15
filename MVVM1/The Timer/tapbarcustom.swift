@@ -19,8 +19,6 @@ struct tapbarcustom: View {
             Rectangle().frame(width: .infinity, height: 65)
                 .cornerRadius(20)
                 .foregroundColor(Color("G&W"))
-                //.foregroundColor(.gray)
-                //.opacity(0.15)
                 .padding(7)
             HStack {
                 ForEach(itemsss.indices) { color in

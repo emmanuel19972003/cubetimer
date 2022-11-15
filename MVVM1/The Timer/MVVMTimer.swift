@@ -14,8 +14,11 @@ extension timer {
         @Published var TextColor:Color = Color("B&W")
         @Published var StartStop:Bool = false
         @Published var contador:Double = 0.000
-        func TimerSetChange(color:Color, Cstate:Bool){
-            contador = 0
+        @Published var Tapfinal:Bool = false
+        @Published var diosmio:Bool = true
+
+        func TimerSetChange(value:Double, color:Color, Cstate:Bool){
+            contador = value
             TextColor = color
             StartStop = Cstate
         }
